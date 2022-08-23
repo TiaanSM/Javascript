@@ -111,3 +111,18 @@ message.match(/aing/g);  // > ain,ain,ain
 let person = "John Doe";
 person.startsWith("John");  // > true
 person.endsWith("Desert");  // > false
+
+
+// Interpolation //
+// Template literals provide an easy way to interpolate variables and expressions into strings.
+// The method is called string interpolation
+
+// Syntax: ${...}
+let firstName = "John";
+let lastName = "Doe";
+let txts = `Welcome ${firstName}, ${lastName}!`;  // > Welcome John Doe!
+
+// Template literals allow expressions in strings:
+let price = 10;
+let VAT = 0.25;
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;  // > Total: 12.50
