@@ -4,7 +4,6 @@ const twoFer = (name = 'you') => {
 //console.log(twoFer('Tiaan'));
 
 
-
 const colorList = ['black', 'brown', 'red', 'orange', 'yellow', 'green', 'blue', 'violet', 'grey', 'white'];
 
 const bandColorList = () => {
@@ -14,6 +13,7 @@ const bandColorList = () => {
 }
 //bandColorList();
 
+
 const getValue = (color) => {
     return colorList.indexOf(color);
 }
@@ -21,29 +21,20 @@ const getValue = (color) => {
 
 
 
-for (let i = 0; i < 11; i++) {
-    //console.log(i);
+// High Score Board // 
+let scoreBoard = {}
+
+const createScoreBoard = (player, score) => {
+    return scoreBoard = { player, score };
 }
+createScoreBoard("The best ever", 1000);
 
-let number = 0;
-while (number < 10) {
-    number++;
-    //console.log(number);
+
+const addPlayer = (scoreBoard, Player, Score) => {
+    let newPlayer = { Player, Score}
+    Object.assign(scoreBoard, newPlayer);
 }
+addPlayer(scoreBoard, 'Tiaan', 200);
+addPlayer(scoreBoard, 'Mans', 900);
 
-for (let i = 10; i > 0; i--) {
-    //console.log(i);
-}
-
-const array = ['hey', 'hello', 'sup', 'oi', 'heyo', 'whoah'];
-
-for (let i = 0; i < array.length; i++) {
-    console.log(array[i]);
-}
-
-
-const numbers = [1, 2 ,3 ,4, 5, 6, 7, 8, 9,];
-
-const sum = numbers.reduce((number, a) => number + a, 0);
-
-console.log(sum);
+console.log(scoreBoard);
